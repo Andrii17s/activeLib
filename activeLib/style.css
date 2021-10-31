@@ -1,0 +1,992 @@
+/*==========================ЗАГАЛЬНІ СТИЛІ САЙТУ===========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	justify-content: stretch;
+}
+
+/*Базовий елемент бібліотеки, не підлягає зміні*/
+h1 {
+	font-family: "Rubik", sans-serif;
+	font-style: normal;
+	font-size: 2.81rem;
+	font-weight: 600;
+	line-height: 3.33rem;
+	color: #FFD600;
+}
+
+/*Базовий елемент бібліотеки, не підлягає зміні*/
+h2 {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-size: 2.18rem;
+	font-weight: 300;
+	line-height: 2.67rem;
+	color: #FFD600;
+}
+
+/*Базовий елемент бібліотеки, не підлягає зміні*/
+.ah-btn {
+	background: #2A2727;
+	padding: 1.62rem 2rem;
+	border: 1px solid #FFD600;
+	border-radius: 8px;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: Montserrat, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1.56rem;
+	line-height: 1.9rem;
+	color: #FFFFFF;
+}
+
+/*Базовий елемент бібліотеки, не підлягає зміні*/
+.ah-content_text {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-size: 1.25rem;
+	font-weight: 300;
+	line-height: 1.52rem;
+	text-align: justify;
+	color: #FFFFFF;
+}
+
+/*Використовується на всіх сторінках*/
+.ah-container {
+	height: 100%;
+	max-width: 100%;
+	background-color: #2B2727;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+/*Використовується на всіх сторінках*/
+.ah-main-width {
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 100%;
+}
+
+/*=======?????=========*/
+.container-2 p {
+	font-family: "Montserrat", sans-serif;
+}
+
+/*=======?????=========*/
+h3 {
+	font-family: "Montserrat", sans-serif;
+}
+
+/*=======?????=========*/
+p {
+	font-family: "Montserrat", sans-serif;
+}
+
+/*=======?????=========*/
+h2, h1 {
+	font-family: "Rubik", sans-serif;
+}
+
+.ah-header,
+.ah-wrapper-ftr,
+.ah-main {
+	width: 100%;
+}
+
+/*=======?????=========*/
+.ah-row-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+/*=======?????=========*/
+.ah-main-autosize {
+	display: flex;
+	height: fit-content;
+	flex-flow: column nowrap;
+	max-width: 41%;
+	margin-top: 8rem;
+	margin-left: 11rem;
+	margin-bottom: 8rem;
+}
+
+/*===============================СТИЛІ ХЕДЕРУ================================*/
+
+.ah-header-container {
+	position: sticky; /*залишає хедер на місці при скролі сторінки*/
+	top: 0; /*підтягує хедер до верхнього краю сторінки*/
+	background-color: #393535; /*колір заднього фону блоку*/
+	align-items: center; /*розміщення обєктів/тексту по центру блоку*/
+	display: flex; /*функція флексу*/
+	max-width: 100%; /*максимальна ширина блоку/хедеру*/
+	min-height: auto; /*min-height: auto;*/ /*аналог верхньої строки*/
+	flex-direction: row; /*розміщення елеметів флекс блоку в колонки*/
+}
+
+.ah-header_logo_v1 {
+	flex: 30%; /* блок займає 30% від усієї ширини*/
+	max-width: 100%;
+}
+
+.ah-header_logo_v1 a img { /*розміри картинки логотипу*/
+	width: 100%;
+	height: auto;
+}
+
+.ah-header_links_v1 {
+	flex: 70%; /* блок займає 70% від усієї ширини*/
+	text-align: center; /*розміщення оюєктів "кнопок" по центру в даномцу блоці*/
+	max-width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.ah-header_links_v1 a:link, a:visited {
+	border: 1px solid #FFD600;
+	background-color: #393535;
+	color: white;
+	font-size: 1.8rem;
+	padding: 0.3rem 2.2rem;
+	text-align: center;
+	margin: 0 0.8rem;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 0.56rem;
+}
+
+@media (max-width: 576px) {
+
+	.ah-header-container {
+		display: flex;
+		flex-flow: column nowrap;
+		max-width: 95%;
+		padding: 0.8rem;
+		margin: 0;
+	}
+
+	.ah-header_links_v1 {
+		margin: 1rem;
+	}
+
+}
+
+.ah-header_links_v1 a:hover, .ah-header_links_v1 a:active {
+	background-color: #FFD600;
+	color: black;
+}
+
+/*@media only screen and (max-width: 1300px) {
+	a:link, a:visited {
+		font-size: 1.5rem;
+		padding: 0.25rem 1.25rem;
+	}
+
+	!*.ah-header_logo_v1 img {
+		padding: 0.2rem 0.3rem;
+		width: 20rem;
+		height: 6rem;
+	}*!
+}
+
+@media only screen and (max-width: 1033px) {
+	header {
+		height: 6rem;
+	}
+
+	a:link, a:visited {
+		font-size: 1.2rem;
+		padding: 0.2rem 1rem;
+	}
+
+	!*.ah-header_logo_v1 img {
+		padding: 0.4rem 0.3rem;
+		width: 15rem;
+		height: 4rem;
+	}*!
+}
+
+@media (max-width: 847px) {
+
+	header {
+		height: 7rem;
+		flex-direction: column;
+	}
+
+	a:link, a:visited {
+		font-size: 1.2rem;
+		padding: 0.2rem 1rem;
+	}
+
+	!*.ah-header_logo_v1 img {
+		padding: 0.2rem 0.3rem;
+		width: 15rem;
+		height: 4rem;
+	}*!
+}
+
+@media (max-width: 594px) {
+
+	.ah-header-container {
+		flex-direction: column;
+	}
+
+	a:link, a:visited {
+		font-size: 0.7rem;
+		padding: 0.1rem 0.5rem;
+		margin-bottom: 1rem
+	}
+
+	!*.ah-header_logo_v1 img {
+		padding: 0.2rem 0.3rem;
+		width: 10rem;
+		height: 3rem;
+	}*!
+}
+
+
+@media only screen and (max-width: 738px) {
+	.header {
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 423px) {
+	.ah-header_logo_v1 img {
+		width: 15rem;
+		height: 4rem;
+	}
+}
+
+@media (max-width: 215px) {
+
+	header {
+		height: 10rem;
+		flex-direction: column;
+	}
+
+	a:link, a:visited {
+		font-size: 0.7rem;
+		padding: 0.1rem 0.5rem;
+		margin-bottom: 1rem
+	}
+
+	!*.ah-header_logo_v1 img {
+		padding: 0.2rem 0.3rem;
+		width: 10rem;
+		height: 3rem;
+	}*!
+}
+
+@media (max-width: 204px) {
+
+	header {
+		height: 10.3rem;
+		flex-direction: column;
+	}
+
+	a:link, a:visited {
+		font-size: 0.7rem;
+		padding: 0.1rem 0.5rem;
+		margin-bottom: 1rem
+	}
+
+	!*.ah-header_logo_v1 img {
+		padding: 0.2rem 0.3rem;
+		width: 5rem;
+		height: 1.3rem;
+	}*!
+}*/
+
+/*==========================СТИЛІ ГОЛОВНОЇ СТОРІНКИ===========================*/
+
+.ah-row-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.ah-main {
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 41%;
+	min-height: auto;
+	margin-top: 8rem;
+	margin-left: 11rem;
+	margin-bottom: 15.25rem;
+}
+
+.ah-main_title,
+.ah-main_content,
+.ah-main_btn {
+	max-width: 100%;
+}
+
+hr {
+	border-top: 3px solid #FFD600;
+	margin: 2.18rem 0 2.68rem 0;
+}
+
+.ah-content_btn {
+	text-align: center;
+	margin-top: 6rem;
+}
+
+@media (max-width: 576px) {
+
+	html {
+		font-size: 12px;
+	}
+
+	.ah-main {
+		display: flex;
+		flex-flow: column nowrap;
+		max-width: 95%;
+		padding: 0.8rem;
+		margin: 0;
+	}
+
+	.ah-content_btn {
+		margin: 2rem 0 2rem 0;
+	}
+
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1366px) {
+
+	.ah-main {
+		display: flex;
+		flex-flow: column nowrap;
+		max-width: 50%;
+		margin-top: 6rem;
+		margin-left: 9rem;
+		margin-bottom: 8rem;
+	}
+}
+
+/*==========================СТИЛІ СТОРІНКИ БІБЛІОТЕКИ===========================*/
+
+/*Для розробника сайдбару*/
+.ah-sidebar {
+	display: flex;
+	max-width: 100%;
+	height: auto;
+	flex-direction: row;
+	flex: 20%;
+}
+
+/*Для розробника сайдбару*/
+.ah-sidebar h2 {
+	color: #FFD600;
+}
+
+.ah-sidebar-library {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 25px;
+	display: flex;
+	flex-direction: column;
+}
+
+.ah-link-sidebar-nav {
+	color: white;
+	margin-top: 10px;
+	padding: 11px 20px 9px 45px;
+	text-align: left;
+	align-items: center;
+	text-decoration: none;
+	min-width: 100%;
+	background: #393535;
+	box-sizing: border-box;
+	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.25);
+	border-radius: 0 9px 9px 0;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1rem;
+	line-height: 30px;
+	text-transform: lowercase;
+	white-space: nowrap;
+}
+
+.ah-sidebar-library a:hover {
+	background-color: #FFD600;
+	color: black;
+}
+
+/*Typography*/
+.ah-column {
+	display: flex;
+	width: 76%;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+}
+
+/*Typography*/
+.ah-typography_title {
+	padding: 1.2rem;
+}
+
+/*Typography*/
+.ah-typography_title h1 {
+	margin-bottom: 1.2rem;
+	text-align: center;
+}
+
+/*Typography*/
+.ah-typography-types {
+	display: flex;
+	justify-content: space-between;
+	max-width: 100%;
+	flex-flow: row nowrap;
+	padding: 1.2rem;
+}
+
+/*Typography*/
+.ah-typography_titles {
+	display: flex;
+	flex: 28%;
+	max-width: 100%;
+	flex-flow: column nowrap;
+}
+
+/*Typography*/
+.ah-typography_titles h2,
+.ah-typography_text h2,
+.ah-typography_emphasis h2 {
+	margin-bottom: 1.2rem;
+}
+
+/*Typography*/
+.ah-typography_text,
+.ah-typography_emphasis {
+	display: flex;
+	flex: 36%;
+	max-width: 100%;
+	flex-flow: column nowrap;
+}
+
+/*Typography*/
+.ah-typography_text p,
+.ah-typography_emphasis p {
+	text-align: justify;
+	margin: 0.8rem 0;
+}
+
+
+.ah-library-info {
+	display: flex;
+	max-width: 100%;
+	flex-direction: column;
+	height: 100%;
+	padding-left: 2.19rem;
+}
+
+.ah-library-info_title,
+.ah-library-info_setup,
+.ah-library-info_use {
+	max-width: 76%;
+}
+
+.ah-library-info_title {
+	margin-top: 5.25rem;
+}
+
+.ah-library-info h2 {
+	margin: 1.87rem 0;
+}
+
+/*==========================СТИЛІ СТОРІНКИ ЗАМОВЛЕНЬ=======================*/
+
+h2 {
+	margin: 0;
+	padding: 0;
+}
+
+.ah-order-info {
+	display: flex;
+	flex: 76%;
+	max-width: 100%;
+	flex-direction: column;
+	padding-bottom: 3rem;
+}
+
+.ah-ord-bl {
+	background-color: #2b2727;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ah-ord-bl-form1 {
+	display: flex;
+	justify-content: center;
+	margin: 1rem;
+}
+
+.ah-ord-bl-form2 {
+	padding: 15px;
+	background-color: #2b2727;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ah-p_v1 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	margin: 1rem;
+	padding: 1rem;
+	text-align: center;
+}
+
+.ah-ord-form-pos {
+	padding: 1rem;
+	line-height: 1.7rem;
+}
+
+/*-------Headings-------*/
+
+.ah-h2_v1 {
+	color: #ffd600;
+	font-family: Rubik;
+	font-weight: 600;
+	font-size: 2rem;
+	padding: 1rem;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.ah-h3_v1 {
+	color: #ffd600;
+	font-family: Rubik;
+	font-weight: 500;
+	font-size: 2rem;
+	padding-top: 1rem;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 1rem;
+}
+
+/*-----------------------*/
+
+.ah-ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.ah-lst-tp-n {
+	list-style-type: none;
+}
+
+.ah-ul1_v1 {
+	position: relative;
+	color: #fff;
+	font-weight: 300;
+	font-size: 1rem;
+	text-align: right;
+	line-height: 1.8rem;
+	padding-right: 1.8rem;
+	border-right: 3px solid #ffd600;
+}
+
+.ah-ul2_v1 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 1rem;
+	line-height: 1.8rem;
+	padding-left: 1.8rem;
+	border-left: 3px solid #ffd600;
+}
+
+/*---------Forms----------*/
+
+.ah-ord-form1 {
+	width: 100%;
+	background-color: #393535;
+	display: flex;
+	padding: 1rem;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 20px;
+}
+
+.ah-ord-form2 {
+	width: 100%;
+	background-color: #393535;
+	display: flex;
+	padding: 1rem 0;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 15px;
+	margin-bottom: 1rem;
+	flex-wrap: wrap;
+}
+
+/*-----------------------*/
+
+/*--------Inputs---------*/
+
+/*Зміна стилів radio-input*/
+
+.ah-input-radio {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.ah-input-radio + label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+}
+
+.ah-input-radio + label::before {
+	content: "";
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	flex-shrink: 0;
+	flex-grow: 0;
+	border: 1px solid #ffd600;
+	background-color: #2a2727;
+	border-radius: 0.5em;
+	margin-right: 0.5em;
+}
+
+.ah-input-radio:checked + label::before {
+	background-color: #ffd600;
+}
+
+/*--------------------*/
+
+.ah-input-text {
+	color: #ffd600;
+	padding: 1rem;
+	font-size: 1rem;
+	background-color: #2a2727;
+	border-radius: 9px;
+	border: none;
+	margin: 0.5rem;
+}
+
+/*Зміна кольору тексту placeholder*/
+input[type="text"]::-webkit-input-placeholder {
+	color: #ffd600;
+}
+
+/*-----------*/
+
+.ah-btn-submit {
+	color: #ffd600;
+	font-weight: 700;
+	padding: 1rem;
+	font-size: 1rem;
+	background-color: #393535;
+	text-align: center;
+	border-radius: 9px;
+	border: 1px solid #ffd600;
+	box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+	margin: 1rem;
+}
+
+input.ah-btn-submit[type="submit"]:hover {
+	background-color: #ffd600;
+	color: black;
+}
+
+.ah-input-flex {
+	display: flex;
+	padding-bottom: 1rem;
+	color: #ffd600;
+	font-size: 0.9rem;
+	flex-wrap: wrap;
+}
+
+.ah-bttn-pos {
+	display: flex;
+}
+
+/*--Розмір кнопки замовлення--*/
+@media (max-width: 1920px) {
+	.ah-btn {
+		padding: 1rem 4.5rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.ah-btn {
+		padding: 0.5rem 3rem;
+	}
+}
+
+.ah-btn {
+	color: #ffd600;
+	font-weight: 700;
+	/* padding: 1rem 4.5rem; */
+	font-size: 1.5rem;
+	background-color: #393535;
+	text-align: center;
+	border-radius: 9px;
+	border: 1px solid #ffd600;
+	box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+button.ah-btn:hover {
+	background-color: #ffd600;
+	color: black;
+}
+
+/*================================СТИЛІ ФУТЕРА===============================*/
+
+.ah-wrapper-ftr {
+	display: flex;
+	flex-direction: column;
+	bottom: 0;
+}
+
+.ah-main-ftr {
+	flex: 1 1 auto;
+}
+
+.ah-footer {
+	display: flex;
+	background-color: #393535;
+	color: #ffffff;
+	padding: 1em;
+	align-items: flex-end;
+}
+
+.ah-container-ftr_1 {
+	flex: 2;
+}
+
+.ah-container-ftr_2 {
+	flex: 3;
+}
+
+/*pts*/
+
+.at-squad-img {
+	display: flex;
+	width: 65%;
+	padding: 7.2rem 0 4.5rem 0;
+}
+
+.at-squad-unit {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 6.75rem;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 2.3rem;
+}
+
+.at-squad-unit-lt {
+	padding-right: 2.3rem;
+}
+
+.at-squad-unit-rt {
+	border-left: 5px solid #ffd600;
+	padding-left: 2.3rem;
+}
+
+/* -- прибирає значки списку -- */
+.ah-lst-tp_n {
+	list-style-type: none;
+}
+
+/* -- вирівнювання тексту по лівому краю -- */
+.ah-txt-algn_lt {
+	text-align: left;
+}
+
+/* -- вирівнювання тексту по правому краю -- */
+.ah-txt-algn_rt {
+	text-align: right;
+}
+
+/* -- колір тексту білий -- */
+.ah-clr_w {
+	color: #ffffff;
+}
+
+/*===================СТИЛІ ПРОПОНУЄМОЇ БІБЛІОТЕКИ====================*/
+
+/*FONTS*/
+.ah-montserrat-family {
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-size: 1.2rem;
+!important;
+}
+
+.ah-rubik-family {
+	font-family: 'Rubik', sans-serif;
+	color: white;
+	font-size: 1.2rem;
+!important;
+}
+
+/*TITLES*/
+.ah-h1,
+.ah-h2,
+.ah-h3,
+.ah-h4,
+.ah-h5,
+.ah-h6 {
+	margin-bottom: 0.5rem;
+	margin-top: 0;
+	font-weight: 500;
+	line-height: 1.2;
+	color: white;
+}
+
+.ah-h1 {
+	font-size: calc(1.425rem + 2.1vw);
+}
+
+@media (min-width: 1200px) {
+	.ah-h1 {
+		font-size: 3rem;
+	}
+}
+
+.ah-h2 {
+	font-size: calc(1.375rem + 1.5vw);
+}
+
+@media (min-width: 1200px) {
+	.ah-h2 {
+		font-size: 2.5rem;
+	}
+}
+
+.ah-h3 {
+	font-size: calc(1.325rem + 0.9vw);
+}
+
+@media (min-width: 1200px) {
+	.ah-h3 {
+		font-size: 2rem;
+	}
+}
+
+.ah-h4 {
+	font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+	.ah-h4 {
+		font-size: 1.5rem;
+	}
+}
+
+.ah-h5 {
+	font-size: 1.25rem;
+}
+
+.ah-h6 {
+	font-size: 1rem;
+}
+
+/*TEXT STYLES*/
+.ah-text-italic {
+	font-style: italic;
+!important;
+}
+
+.ah-text-underline {
+	text-decoration: underline !important;
+}
+
+.ah-text-line-through {
+	text-decoration: line-through !important;
+}
+
+.ah-text-lowercase {
+	text-transform: lowercase !important;
+}
+
+.ah-text-uppercase {
+	text-transform: uppercase !important;
+}
+
+.ah-text-capitalize {
+	text-transform: capitalize !important;
+}
+
+.ah-text-primary {
+	opacity: 1;
+	color: #375a7f !important;
+}
+
+.ah-text-secondary {
+	opacity: 1;
+	color: #444 !important;
+}
+
+.ah-text-success {
+	opacity: 1;
+	color: #00bc8c !important;
+}
+
+.ah-text-info {
+	opacity: 1;
+	color: #3498db !important;
+}
+
+.ah-text-warning {
+	opacity: 1;
+	color: #f39c12 !important;
+}
+
+.ah-text-danger {
+	opacity: 1;
+	color: #e74c3c !important;
+}
+
+.ah-text-light {
+	opacity: 1;
+	color: #adb5bd !important;
+}
+
+.ah-text-dark {
+	opacity: 1;
+	color: #303030 !important;
+}
+
+.ah-text-muted {
+	opacity: 1;
+	color: #888 !important;
+}
+
+/*-----------------------*/
